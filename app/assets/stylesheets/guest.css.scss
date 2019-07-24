@@ -1,0 +1,71 @@
+body.home-controller {
+  background-color: #def0fe !important;
+  h1 {
+    font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: -.02em;
+    -webkit-font-smoothing: antialiased;
+    color: #3a3a3a;
+  }
+}
+.yellow {
+  color: yellow !important;
+}
+.btn-aqua {
+  background-color: #57bad4;
+}
+a.signup-button {
+  padding: 10px 20px !important;
+  background-color: #57bad4;
+  margin-top: 10px;
+  color: white !important;
+  margin-right: 10px;
+  border-radius: 5px;
+
+}
+#signup-button a:hover{
+    background-color: #3398b5 !important;
+}
+
+#home-message {
+  // min-height: 700px;
+  margin-bottom: 10%;
+  margin-top: 1%;
+  p {
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.6875;
+    font-weight: normal;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+} 
+#todo-block {
+  margin-top: 3%;
+  // min-height: 700px;
+  font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 1.6875;
+  font-weight: normal;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10%;
+}
+#home-subfooter {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  h1, h2, h3, h4, h5, h6 {
+    color: #FDF1DF;
+  }
+  background-color: #8AA0B0;
+  color: #FDF1DF;
+  ul {
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+  }
+}
+
