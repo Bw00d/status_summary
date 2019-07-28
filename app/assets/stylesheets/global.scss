@@ -102,12 +102,12 @@ $btn-primary-border:             $gray-lighter;
 }
 
 // Dropdowns (including the dropdown in the Navbar)
-$dropdown-bg:                    white;
+$dropdown-bg:                    #414141;
 $dropdown-border:                rgba(0,0,0,.15);
 $dropdown-divider-bg:            #e5e5e5;
-$dropdown-link-color:            $text-color;
-$dropdown-link-hover-color:      $brand-light;
-$dropdown-link-hover-bg:         white;
+$dropdown-link-color:            #fd9727;
+$dropdown-link-hover-color:      #fd9727;
+$dropdown-link-hover-bg:         #414141;
 
 // Forms
 $input-border-focus:             $brand-lighter;
@@ -151,14 +151,14 @@ label, dt {
 // Navbar
 $navbar-height:                    60px;
 $navbar-default-color:             #3a3a3a;
-$navbar-default-bg:                white;
-$navbar-default-link-color:                #3a3a3a;
-$navbar-default-link-hover-color:          #3a3a3a;
-$navbar-default-link-hover-bg:             #f9f9f9;
-$navbar-default-link-active-color:         white;
-$navbar-default-link-active-bg:            $brand-light;
-$navbar-default-link-disabled-color:       $gray-lighter;
-$navbar-default-link-disabled-bg:          $brand-light;
+$navbar-default-bg:                #414141;
+$navbar-default-link-color:                #fd9131;
+$navbar-default-link-hover-color:          #fd9727;
+$navbar-default-link-hover-bg:             lighten(desaturate(#414141, 80%), 10%);
+$navbar-default-link-active-color:         #fd9727;
+$navbar-default-link-active-bg:            lighten(desaturate(#414141, 80%), 10%);
+$navbar-default-link-disabled-color:       #fd9727;
+$navbar-default-link-disabled-bg:          lighten(desaturate(#414141, 80%), 10%);
 
 // Navbar items font weight
 .nav > li > a {
@@ -188,11 +188,9 @@ body {
 
 // Centralize logo vertically in the navbar
 .navbar-brand {
-  h4 {
-    font-size: 1.5em !important;
-  }
-  padding-top: 1px !important;
-
+    color: white !important;
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 // Pagination

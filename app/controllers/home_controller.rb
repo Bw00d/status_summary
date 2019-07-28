@@ -2,5 +2,7 @@
 class HomeController < ApplicationController
   include SkipAuthorization
 
-  def index; end
+  def index; 
+    @summaries = Summary.all
+  end
 end

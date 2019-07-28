@@ -1,0 +1,258 @@
+<div class="row">
+  <div class="col-md-8 center-block">
+
+    <h3 class="col-med-12 center-vh-container">
+      <strong>Fire <%= @summary.number %>  –  <%= @summary.name %></strong>  
+             
+    </h3>
+
+    <p class="col-med-8">
+      <strong>IC</strong>
+      <%= @summary.ic %>  / <%= @summary.management_organization %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Summary Date</strong>
+      <%= @summary.date.try(:strftime, "%b %e, %Y") %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Size</strong>
+      <%= @summary.size %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Percent Complete</strong>
+      <%= @summary.percent_complete %>
+    </p>
+
+    <!-- <p class="col-med-12">
+      <strong>Incident type:</strong>
+      <%#= @summary.incident_type %>
+    </p> -->
+
+    <!-- <p class="col-med-12">
+      <strong>Cause:</strong>
+      <%#= @summary.cause %>
+    </p> -->
+
+    <p class="col-med-12">
+      <strong>Suppression strategy</strong>
+      <%= @summary.suppression_strategy %>
+    </p>
+<!-- 
+    <p class="col-med-12">
+      <strong>Complexity</strong>
+      <%#= @summary.complexity %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Report date</strong>
+      <%#= @summary.report_date %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Prepared by</strong>
+      <%#= @summary.prepared_by %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Approved by</strong>
+      <%#= @summary.approved_by %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Primary agency</strong>
+      <%#= @summary.primary_agency %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>State</strong>
+      <%#= @summary.state %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>County</strong>
+      <%#= @summary.county %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>City</strong>
+      <%#= @summary.city %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Jurisdiction</strong>
+      <%#= @summary.jurisdiction %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Ownership</strong>
+      <%#= @summary.ownership %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Coordinates</strong>
+      <%#= @summary.latitude %> x <%= @summary.longitude %>
+    </p> -->
+
+    <p class="col-med-12">
+      <strong>Area Description</strong>
+      <%= @summary.area_description %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Fire behavior</strong>
+      <%= @summary.fire_behavior %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Narrative</strong>
+      <%= @summary.narrative %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Fuel type</strong>
+      <%= @summary.fuel_type %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Damage Assessment</strong>
+      <%= @summary.damage_assessment %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Injuries</strong>
+      <%= @summary.injuries %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat remark</strong>
+      <%= @summary.threat_remark %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Weather</strong>
+      <%= @summary.weather %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Projected spread 12</strong>
+      <%= @summary.projected_spread_12 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Projected spread 24</strong>
+      <%= @summary.projected_spread_24 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Projected spread 48</strong>
+      <%= @summary.projected_spread_48 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Projected spread 72</strong>
+      <%= @summary.projected_spread_72 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Projected spread after</strong>
+      <%= @summary.projected_spread_after %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Stragetic objectives</strong>
+      <%= @summary.stragetic_objectives %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat 12</strong>
+      <%= @summary.threat_12 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat 24</strong>
+      <%= @summary.threat_24 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat 48</strong>
+      <%= @summary.threat_48 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat 72</strong>
+      <%= @summary.threat_72 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Threat after</strong>
+      <%= @summary.threat_after %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Critical needs 12</strong>
+      <%= @summary.critical_needs_12 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Critical needs 24</strong>
+      <%= @summary.critical_needs_24 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Critical needs 48</strong>
+      <%= @summary.critical_needs_48 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Critical needs 72</strong>
+      <%= @summary.critical_needs_72 %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Critical needs after</strong>
+      <%= @summary.critical_needs_after %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Strategic discussion</strong>
+      <%= @summary.strategic_discussion %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Tomorrows plan</strong>
+      <%= @summary.tomorrows_plan %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Anticipated completion</strong>
+      <%= @summary.anticipated_completion %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Cost</strong>
+      <%= @summary.cost %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Remarks</strong>
+      <%= @summary.remarks %>
+    </p>
+
+    <p class="col-med-12">
+    <strong>Resources</strong>
+      <%= @summary.resources %>
+    </p>
+
+    <p class="col-med-12">
+      <strong>Cooperators</strong>
+      <%= @summary.cooperators %>
+    </p>
+    <br>
+    <%= link_to 'Edit', edit_summary_path(@summary) %> |
+    <%= link_to 'Back', summaries_path %>
+  </div>
+</div>
+

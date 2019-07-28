@@ -1,0 +1,14 @@
+
+<div class="col-md-8 center-block">
+  <h1>Summaries</h1>
+  <ul>
+    <% @summaries.each do |s|  %>
+      <li><%= s.name %></li>
+    <% end %>
+  </ul>
+
+
+  <br>
+
+  <%= link_to 'New Summary', new_summary_path, class: 'btn btn-primary tiny' %>
+</div>

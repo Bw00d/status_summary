@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :summaries
   root to: 'home#index'
 
   devise_for :users, controllers: {

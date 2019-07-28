@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816134443) do
+ActiveRecord::Schema.define(version: 20190724230635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,64 @@ ActiveRecord::Schema.define(version: 20170816134443) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "summaries", force: :cascade do |t|
+    t.string "name"
+    t.string "number"
+    t.string "ic"
+    t.string "management_organization"
+    t.datetime "start_date"
+    t.string "size"
+    t.string "percent_complete"
+    t.string "incident_type"
+    t.string "cause"
+    t.string "suppression_strategy"
+    t.string "complexity"
+    t.date "date"
+    t.string "prepared_by"
+    t.string "approved_by"
+    t.string "primary_agency"
+    t.string "state"
+    t.string "county"
+    t.string "city"
+    t.string "jurisdiction"
+    t.string "ownership"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
+    t.string "area_description"
+    t.text "fire_behavior"
+    t.text "narrative"
+    t.text "fuel_type"
+    t.text "damage_assessment"
+    t.string "injuries"
+    t.text "threat_remark"
+    t.text "weather"
+    t.text "projected_spread_12"
+    t.text "projected_spread_24"
+    t.text "projected_spread_48"
+    t.text "projected_spread_72"
+    t.text "projected_spread_after"
+    t.text "stragetic_objectives"
+    t.text "threat_12"
+    t.text "threat_24"
+    t.text "threat_48"
+    t.text "threat_72"
+    t.text "threat_after"
+    t.text "critical_needs_12"
+    t.text "critical_needs_24"
+    t.text "critical_needs_48"
+    t.text "critical_needs_72"
+    t.text "critical_needs_after"
+    t.text "strategic_discussion"
+    t.text "tomorrows_plan"
+    t.date "anticipated_completion"
+    t.decimal "cost"
+    t.text "remarks"
+    t.text "resources"
+    t.text "cooperators"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

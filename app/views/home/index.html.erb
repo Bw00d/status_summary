@@ -1,2 +1,16 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<% unless current_user  %>
+  <div class="col-md-8 center-block">
+    <h1 class="center">Status Summary</h1>
+  </div>
+<% else  %>
+  <div class="col-md-8 center-block">
+  <% @summaries.each do |s|  %>
+    <h2 class="center">Status Summaries</h2>
+    <ul>
+      <li><%= link_to "#{s.number} - #{s.name }", summary_path(s) %></li>
+    </ul>
+  <% end  %>
+  </div>
+<% end  %>
+
