@@ -1,31 +1,55 @@
-<div class="row">
-  <div class="col-md-8 center-block">
-
-    <h3 class="col-med-12 center-vh-container">
-      <strong>Fire <%= @summary.number %>  –  <%= @summary.name %></strong>  
-             
+<div class="container">
+  <div class=" center-block">
+    <%= link_to 'Summaries', summaries_path, class: "btn btn-primary" %>
+    <%= link_to 'Update', new_summary_path, class: "btn btn-info float-right" %>
+    <h3 class=" center-vh-container">
+      <strong>Fire <%= @summary.number %>  –  <%= @summary.name %></strong>           
     </h3>
+    <div class="row">
+      <p class="col-sm-6">
+        <strong><%= @summary.date.try(:strftime, "%b %e, %Y") %></strong>
+      </p>
+    </div>
 
-    <p class="col-med-8">
-      <strong>IC</strong>
-      <%= @summary.ic %>  / <%= @summary.management_organization %>
+    <div class="row">
+      <p class="col-sm-4">
+        <strong>IC</strong>
+        <%= @summary.ic %>  / <%= @summary.management_organization %>
+      </p>
+      <p class="col-sm-2">
+        <strong>Size</strong>
+        <%= @summary.size %>
+      </p>
+      <p class="col-sm-6">
+        <% if !@summary.fuel_type.empty? %>
+          <strong>Fuel type</strong>
+          <%= @summary.fuel_type %>
+      <% end %>
+      </p>
+    </div>
+      <p class="col-med-12">
+        <% if !@summary.area_description.empty? %>  
+            <strong>Area Description</strong>
+            <%= @summary.area_description %>
+        <% end %>
     </p>
 
-    <p class="col-med-12">
-      <strong>Summary Date</strong>
-      <%= @summary.date.try(:strftime, "%b %e, %Y") %>
-    </p>
-
-    <p class="col-med-12">
-      <strong>Size</strong>
-      <%= @summary.size %>
-    </p>
-
-    <p class="col-med-12">
-      <strong>Percent Complete</strong>
-      <%= @summary.percent_complete %>
-    </p>
-
+    <div class="row">
+      <p class="col-sm-6">
+        <% if !@summary.suppression_strategy.empty? %>
+          <strong>Suppression strategy</strong>
+          <%= @summary.suppression_strategy %>
+        <% end %>
+      </p>
+    </div>  
+    <div class="row">
+      <p class="col-sm-6">
+        <% unless @summary.percent_complete.empty? %>
+          <strong>% Complete</strong>
+          <%= @summary.percent_complete %> %
+        <% end %>
+      </p>
+    </div>
     <!-- <p class="col-med-12">
       <strong>Incident type:</strong>
       <%#= @summary.incident_type %>
@@ -35,11 +59,6 @@
       <strong>Cause:</strong>
       <%#= @summary.cause %>
     </p> -->
-
-    <p class="col-med-12">
-      <strong>Suppression strategy</strong>
-      <%= @summary.suppression_strategy %>
-    </p>
 <!-- 
     <p class="col-med-12">
       <strong>Complexity</strong>
@@ -96,10 +115,6 @@
       <%#= @summary.latitude %> x <%= @summary.longitude %>
     </p> -->
 
-    <p class="col-med-12">
-      <strong>Area Description</strong>
-      <%= @summary.area_description %>
-    </p>
 
     <p class="col-med-12">
       <strong>Fire behavior</strong>
@@ -112,23 +127,23 @@
     </p>
 
     <p class="col-med-12">
-      <strong>Fuel type</strong>
-      <%= @summary.fuel_type %>
+      <% unless @summary.damage_assessment.empty? %>
+        <%= @summary.damage_assessment %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Damage Assessment</strong>
-      <%= @summary.damage_assessment %>
+      <% unless @summary.injuries.empty? %>
+        <strong>Injuries</strong>
+        <%= @summary.injuries %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Injuries</strong>
-      <%= @summary.injuries %>
-    </p>
-
-    <p class="col-med-12">
-      <strong>Threat remark</strong>
-      <%= @summary.threat_remark %>
+      <% unless @summary.threat_remark.empty? %>
+        <strong>Threat remark</strong>
+        <%= @summary.threat_remark %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
@@ -137,53 +152,73 @@
     </p>
 
     <p class="col-med-12">
-      <strong>Projected spread 12</strong>
-      <%= @summary.projected_spread_12 %>
+      <% unless @summary.projected_spread_12.empty? %>
+        <strong>Projected spread 12</strong>
+        <%= @summary.projected_spread_12 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Projected spread 24</strong>
-      <%= @summary.projected_spread_24 %>
+      <% unless @summary.projected_spread_24.empty? %>
+        <strong>Projected spread 24</strong>
+        <%= @summary.projected_spread_24 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Projected spread 48</strong>
-      <%= @summary.projected_spread_48 %>
+      <% unless @summary.projected_spread_48.empty? %>
+        <strong>Projected spread 48</strong>
+        <%= @summary.projected_spread_48 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Projected spread 72</strong>
-      <%= @summary.projected_spread_72 %>
+      <% unless @summary.projected_spread_after.empty? %>
+        <strong>Projected spread 72</strong>
+        <%= @summary.projected_spread_72 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Projected spread after</strong>
-      <%= @summary.projected_spread_after %>
+      <% unless @summary.projected_spread_after.empty? %>
+        <strong>Projected spread after</strong>
+        <%= @summary.projected_spread_after %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Stragetic objectives</strong>
-      <%= @summary.stragetic_objectives %>
+      <% unless @summary.stragetic_objectives.empty? %>
+        <strong>Stragetic objectives</strong>
+        <%= @summary.stragetic_objectives %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Threat 12</strong>
-      <%= @summary.threat_12 %>
+      <% unless @summary.threat_12 %>
+        <strong>Threat 12</strong>
+        <%= @summary.threat_12 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Threat 24</strong>
-      <%= @summary.threat_24 %>
+      <% unless @summary.threat_24.empty? %>
+        <strong>Threat 24</strong>
+        <%= @summary.threat_24 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Threat 48</strong>
-      <%= @summary.threat_48 %>
+      <% unless @summary.threat_48.empty? %>
+        <strong>Threat 48</strong>
+        <%= @summary.threat_48 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Threat 72</strong>
-      <%= @summary.threat_72 %>
+      <% unless @summary.threat_72.empty? %>
+        <strong>Threat 72</strong>
+        <%= @summary.threat_72 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
@@ -251,8 +286,7 @@
       <%= @summary.cooperators %>
     </p>
     <br>
-    <%= link_to 'Edit', edit_summary_path(@summary) %> |
-    <%= link_to 'Back', summaries_path %>
+    <%= link_to 'Edit', edit_summary_path(@summary) %>
   </div>
 </div>
 

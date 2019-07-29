@@ -5,8 +5,8 @@
   </div>
 <% else  %>
   <div class="col-md-8 center-block">
-  <% @summaries.each do |s|  %>
     <h2 class="center">Summaries</h2>
+  <% @summaries.each do |s|  %>
     <ul class="summaries">
       <%= link_to summary_path(s) do %>
       <li><%= s.number %> – <%= s.name %></li>

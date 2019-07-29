@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   include SkipAuthorization
 
   def index; 
-    @summaries = Summary.all
+    @summaries = Summary.all.order(number: :asc)
   end
 end

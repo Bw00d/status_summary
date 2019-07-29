@@ -6,7 +6,7 @@ class SummariesController < ApplicationController
   # GET /summaries
   # GET /summaries.json
   def index
-    @summaries = Summary.all
+    @summaries = Summary.all.order(number: :asc)
   end
 
   # GET /summaries/1
