@@ -1,9 +1,9 @@
 
 <div class="col-md-8 center-block">
   <h1>Summaries</h1>
-  <ul>
+  <ul class="summaries">
     <% @summaries.each do |s|  %>
-      <li><%= s.name %></li>
+      <li><%= link_to "#{s.number} – #{s.name}", s, class: "btn" %></li>
     <% end %>
   </ul>
 

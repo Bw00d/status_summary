@@ -6,9 +6,11 @@
 <% else  %>
   <div class="col-md-8 center-block">
   <% @summaries.each do |s|  %>
-    <h2 class="center">Status Summaries</h2>
-    <ul>
-      <li><%= link_to "#{s.number} - #{s.name }", summary_path(s) %></li>
+    <h2 class="center">Summaries</h2>
+    <ul class="summaries">
+      <%= link_to summary_path(s) do %>
+      <li><%= s.number %> – <%= s.name %></li>
+      <% end %>
     </ul>
   <% end  %>
   </div>
