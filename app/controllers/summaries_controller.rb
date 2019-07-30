@@ -6,12 +6,13 @@ class SummariesController < ApplicationController
   # GET /summaries
   # GET /summaries.json
   def index
-    @summaries = Summary.all.order(number: :asc)
+    @summaries = Summary.where(parent_id: nil).order(number: :asc)
   end
 
   # GET /summaries/1
   # GET /summaries/1.json
   def show
+    @updates = Summary.where(number: @summary.number)
   end
 
   # GET /summaries/new
@@ -63,6 +64,12 @@ class SummariesController < ApplicationController
     end
   end
 
+  def duplicate
+    @summary = Summary.find(params[:id])
+    @new_summary = @summary.duplicate
+    redirect_to summaries_path
+  end 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_summary
@@ -81,6 +88,6 @@ class SummariesController < ApplicationController
                                       :threat_12, :threat_24, :threat_48, :threat_72, :threat_after, :critical_needs_12, 
                                       :critical_needs_24, :critical_needs_48, :critical_needs_72, :critical_needs_after, 
                                       :strategic_discussion, :tomorrows_plan, :anticipated_completion, :cost, :remarks, 
-                                      :resources, :cooperators, :date)
+                                      :resources, :cooperators, :date, :parent_id)
     end
 end
