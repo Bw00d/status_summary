@@ -4,4 +4,7 @@ $(document).ready(function() {
   $('.secondary').click(function() {
     $(this).children().show();
   });
+  $('#show-secondary-fields').click(function() {
+    $('.secondary').toggle();
+  });
 });
