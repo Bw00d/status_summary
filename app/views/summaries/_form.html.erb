@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <%= form.label :date %>
-    <%= form.date_select :date, id: :summary_date, class: "form-control" %>
+    <%= form.date_select :date, id: :summary_date, class: "form-control " %>
   </div>
 
   <div class="form-group">
@@ -26,12 +26,12 @@
     <%= form.text_field :number, id: :summary_number, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label "Incident Commander" %>
     <%= form.text_field :ic, id: :summary_ic, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :management_organization %>
     <%= form.text_field :management_organization, id: :summary_management_organization, class: "form-control", 
                         placeholder: "ICT3, ICT4, etc."%>
@@ -42,7 +42,7 @@
     <%#= form.datetime_select :start_date, id: :summary_start_date, class: "form-control" %>
   </div> -->
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :size %>
     <%= form.text_field :size, id: :summary_size, class: "form-control" %>
   </div>
@@ -62,7 +62,7 @@
     <%#= form.text_field :cause, id: :summary_cause, class: "form-control" %>
   </div> -->
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :suppression_strategy %>
     <%= form.text_field :suppression_strategy, id: :summary_suppression_strategy, class: "form-control" %>
   </div>
@@ -117,17 +117,17 @@
     <%#= form.text_field :ownership, id: :summary_ownership, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :latitude %>
     <%= form.text_field :latitude, id: :summary_latitude, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :longitude %>
     <%= form.text_field :longitude, id: :summary_longitude, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :area_description %>
     <%= form.text_field :area_description, id: :summary_area_description, class: "form-control" %>
   </div>
@@ -142,22 +142,22 @@
     <%= form.text_area :narrative, id: :summary_narrative, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :fuel_type %>
     <%= form.text_area :fuel_type, id: :summary_fuel_type, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :damage_assessment %>
     <%= form.text_area :damage_assessment, id: :summary_damage_assessment, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :injuries %>
     <%= form.text_field :injuries, id: :summary_injuries, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :threat_remark %>
     <%= form.text_area :threat_remark, id: :summary_threat_remark, class: "form-control" %>
   </div>
@@ -167,59 +167,59 @@
     <%= form.text_area :weather, id: :summary_weather, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label "Projected Spread" %>
     <%= form.text_area :projected_spread_12, id: :summary_projected_spread_12, class: "form-control",
                         placeholder: "12 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :projected_spread_24, id: :summary_projected_spread_24, class: "form-control",
                         placeholder: "24 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :projected_spread_48, id: :summary_projected_spread_48, class: "form-control",
                         placeholder: "48 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :projected_spread_72, id: :summary_projected_spread_72, class: "form-control",
                         placeholder: "72 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :projected_spread_after, id: :summary_projected_spread_after, class: "form-control",
                         placeholder: "Beyond 72 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :stragetic_objectives %>
     <%= form.text_area :stragetic_objectives, id: :summary_stragetic_objectives, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label "Threat Summary" %>
     <%= form.text_area :threat_12, id: :summary_threat_12, class: "form-control",
                         placeholder: "12 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :threat_24, id: :summary_threat_24, class: "form-control",
                         placeholder: "24 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :threat_48, id: :summary_threat_48, class: "form-control",
                         placeholder: "48 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :threat_72, id: :summary_threat_72, class: "form-control",
                         placeholder: "72 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :threat_after, id: :summary_threat_after, class: "form-control",
                         placeholder: "Beyond 72 Hours" %>
   </div>
@@ -230,27 +230,27 @@
                         placeholder: "12 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :critical_needs_24, id: :summary_critical_needs_24, class: "form-control",
                         placeholder: "24 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :critical_needs_48, id: :summary_critical_needs_48, class: "form-control",
                         placeholder: "48 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :critical_needs_72, id: :summary_critical_needs_72, class: "form-control",
                         placeholder: "72 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.text_area :critical_needs_after, id: :summary_critical_needs_after, class: "form-control",
                         placeholder: "Beyond 72 Hours" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :strategic_discussion %>
     <%= form.text_area :strategic_discussion, id: :summary_strategic_discussion, class: "form-control" %>
   </div>
@@ -265,12 +265,12 @@
     <%= form.date_select :anticipated_completion, id: :summary_anticipated_completion, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :cost %>
     <%= form.text_field :cost, id: :summary_cost, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :remarks %>
     <%= form.text_area :remarks, id: :summary_remarks, class: "form-control" %>
   </div>
@@ -280,12 +280,13 @@
     <%= form.text_area :resources, id: :summary_resources, class: "form-control" %>
   </div>
 
-  <div class="form-group">
+  <div class="form-group secondary">
     <%= form.label :cooperators %>
     <%= form.text_area :cooperators, id: :summary_cooperators, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-success' %>
   </div>
+  <br>
 <% end %>

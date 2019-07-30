@@ -1,5 +1,5 @@
 <div class="container">
-  <div class=" center-block">
+  <div class="col-md-8 center-block">
     <%= link_to 'Summaries', summaries_path, class: "btn btn-primary" %>
     <%#= link_to 'Update', new_summary_path, class: "btn btn-info float-right" %>
     <%= link_to 'Update', duplicate_path, method: :get,class: "btn btn-info float-right" %>
@@ -37,12 +37,14 @@
       <% end %>
       </p>
     </div>
-      <p class="col-med-12">
-        <% if !@summary.area_description.empty? %>  
-            <strong>Area Description</strong>
-            <%= @summary.area_description %>
-        <% end %>
-    </p>
+    <% if !@summary.area_description.empty? %>  
+      <div class="row">
+        <p class="col-med-12">
+              <strong>Area Description</strong>
+              <%= @summary.area_description %>
+        </p>
+      </div>
+    <% end %>
 
     <div class="row">
       <p class="col-sm-6">
@@ -55,7 +57,7 @@
     <div class="row">
       <p class="col-sm-6">
         <% unless @summary.percent_complete.empty? %>
-          <strong>% Complete</strong>
+          <strong>Percent Complete</strong>
           <%= @summary.percent_complete %> %
         <% end %>
       </p>
@@ -232,38 +234,52 @@
     </p>
 
     <p class="col-med-12">
-      <strong>Threat after</strong>
-      <%= @summary.threat_after %>
+      <% if @summary.threat_after? %>
+        <strong>Threat after</strong>
+        <%= @summary.threat_after %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Critical needs 12</strong>
-      <%= @summary.critical_needs_12 %>
+      <% if @summary.critical_needs_12? %>
+        <strong>Critical needs 12</strong>
+        <%= @summary.critical_needs_12 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Critical needs 24</strong>
-      <%= @summary.critical_needs_24 %>
+      <% if @summary.critical_needs_24? %>
+        <strong>Critical needs 24</strong>
+        <%= @summary.critical_needs_24 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Critical needs 48</strong>
-      <%= @summary.critical_needs_48 %>
+      <% if @summary.critical_needs_48? %>
+        <strong>Critical needs 48</strong>
+        <%= @summary.critical_needs_48 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Critical needs 72</strong>
-      <%= @summary.critical_needs_72 %>
+      <% if @summary.critical_needs_72? %>
+        <strong>Critical needs 72</strong>
+        <%= @summary.critical_needs_72 %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
-      <strong>Critical needs after</strong>
-      <%= @summary.critical_needs_after %>
+     <% if @summary.critical_needs_after? %>
+        <strong>Critical needs after</strong>
+        <%= @summary.critical_needs_after %>
+      <% end %> 
     </p>
 
     <p class="col-med-12">
-      <strong>Strategic discussion</strong>
-      <%= @summary.strategic_discussion %>
+      <% if @summary.strategic_discussion? %>
+        <strong>Strategic discussion</strong>
+        <%= @summary.strategic_discussion %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
@@ -272,8 +288,10 @@
     </p>
 
     <p class="col-med-12">
-      <strong>Anticipated completion</strong>
-      <%= @summary.anticipated_completion %>
+      <% if  %>
+        <strong>Anticipated completion</strong>
+        <%= @summary.anticipated_completion %>
+      <% end %>
     </p>
 
     <p class="col-med-12">
@@ -292,11 +310,15 @@
     </p>
 
     <p class="col-med-12">
-      <strong>Cooperators</strong>
-      <%= @summary.cooperators %>
+      <% if @summary.cooperators? %>
+        <strong>Cooperators</strong>
+        <%= @summary.cooperators %>
+      <% end %>
     </p>
     <br>
-    <%= link_to 'Edit', edit_summary_path(@summary) %>
+    <%= link_to 'Edit', edit_summary_path(@summary), class: "btn btn-warning " %>
+    <%= link_to "DELETE SUMMARY", @summary,
+                        method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger float-right" %>
   </div>
 </div>
 

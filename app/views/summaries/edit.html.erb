@@ -1,5 +1,9 @@
 <div class="col-md-8 center-block">
-  <h1>Editing Summary</h1>
+  <% if @summary.parent_id.nil? %>
+    <h1>Editing Parent Summary</h1>
+  <% else %>
+    <h1>Editing Summary</h1>
+  <% end %>
 
 <%= render 'form', summary: @summary, class: "btn btn-primary radius" %>
 
