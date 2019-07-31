@@ -67,7 +67,7 @@ class SummariesController < ApplicationController
   def duplicate
     @summary = Summary.find(params[:id])
     @new_summary = @summary.duplicate
-    redirect_to summaries_path
+    redirect_to summary_path(Summary.last)
   end 
 
   private
