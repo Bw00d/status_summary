@@ -7,7 +7,11 @@ class Summary < ApplicationRecord
     else
       @update = self.dup
     end
-      @update.update_attributes(parent_id: 1, fire_behavior: "",narrative:"",weather: "",
-                              tomorrows_plan: "",cost: "", date:Date.today )
+      @update.update_attributes(parent_id: parent_id, fire_behavior: "",narrative:"",weather: "",
+                              tomorrows_plan: "",cost: "", date:Date.today, remarks: "" )
+  end
+
+  def updates
+    Summary.where(parent_id: self.id)
   end
 end

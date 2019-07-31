@@ -3,7 +3,16 @@
   <h1>Summaries</h1>
   <ul class="summaries">
     <% @summaries.each do |s|  %>
-      <li><%= link_to "#{s.number} – #{s.name}", s, class: "btn" %></li>
+      <li><%= link_to "#{s.number} – #{s.name}", s.updates.last, class: "btn" %>
+        <ul class="babies">
+          <% s.updates.order(date: :desc).each do |u|  %>
+            <li>
+              <%= link_to u.date.try(:strftime, '%m/%d'), u %>
+            </li>
+          <% end %>
+          <li><%= link_to s.date.try(:strftime, '%m/%d'), s %></li>
+        </ul>
+      </li>
     <% end %>
   </ul>
 

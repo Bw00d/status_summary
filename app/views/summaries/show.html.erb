@@ -1,14 +1,13 @@
 <div class="container">
   <div class="col-md-8 center-block">
     <%= link_to 'Summaries', summaries_path, class: "btn btn-primary" %>
-    <%#= link_to 'Update', new_summary_path, class: "btn btn-info float-right" %>
     <%= link_to 'Update', duplicate_path, method: :get,class: "btn btn-info float-right" %>
     <h3 class=" center-vh-container">
       <strong>Fire <%= @summary.number %>  –  <%= @summary.name %></strong>           
     </h3>
     <div class="row">
       <ul class="updates">
-        <% @updates.each do |u|  %>
+        <% @updates.order(date: :desc).each do |u|  %>
         <li>
           <%= link_to u.date.try(:strftime, '%m/%d'), u, class: "summary-date" %>
         </li>
@@ -37,9 +36,10 @@
       <% end %>
       </p>
     </div>
+
     <% if !@summary.area_description.empty? %>  
       <div class="row">
-        <p class="col-med-12">
+        <p class="col-sm-12">
               <strong>Area Description</strong>
               <%= @summary.area_description %>
         </p>
