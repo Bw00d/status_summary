@@ -46,6 +46,9 @@ GEM
       execjs
     awesome_print (1.8.0)
     bcrypt (3.1.11)
+    best_in_place (3.0.3)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
     better_errors (2.3.0)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -321,6 +324,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  best_in_place (~> 3.0.1)
   better_errors
   binding_of_caller
   bootstrap-sass
