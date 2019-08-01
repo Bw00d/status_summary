@@ -23,16 +23,16 @@
     <div class="row">
       <p class="col-sm-4">
         <strong>IC</strong>
-        <%= @summary.ic %>  / <%= @summary.management_organization %>
+        <%= best_in_place @summary, :ic, :as => :input %>  / <%= best_in_place @summary, :management_organization, :as => :input %>
       </p>
       <p class="col-sm-2">
         <strong>Size</strong>
-        <%= @summary.size %>
+        <%= best_in_place @summary, :size, as: :input %>
       </p>
       <p class="col-sm-6">
         <% if !@summary.fuel_type.empty? %>
           <strong>Fuel type</strong>
-          <%= @summary.fuel_type %>
+          <%= best_in_place @summary, :fuel_type, as: :input %>
       <% end %>
       </p>
     </div>
@@ -41,7 +41,7 @@
       <div class="row">
         <p class="col-sm-12">
               <strong>Area Description</strong>
-              <%= @summary.area_description %>
+              <%= best_in_place @summary, :area_description, as: :textarea %>
         </p>
       </div>
     <% end %>
@@ -50,7 +50,7 @@
       <p class="col-sm-6">
         <% if !@summary.suppression_strategy.empty? %>
           <strong>Suppression strategy</strong>
-          <%= @summary.suppression_strategy %>
+          <%= best_in_place @summary, :suppression_strategy, as: :textarea %>
         <% end %>
       </p>
     </div>  
@@ -58,7 +58,7 @@
       <p class="col-sm-6">
         <% unless @summary.percent_complete.empty? %>
           <strong>Percent Complete</strong>
-          <%= @summary.percent_complete %> %
+          <%= best_in_place @summary, :percent_complete, as: :input %> %
         <% end %>
       </p>
     </div>
@@ -130,17 +130,17 @@
 
     <p class="col-med-12">
       <strong>Fire behavior</strong>
-      <%= @summary.fire_behavior %>
+      <%= best_in_place @summary, :fire_behavior, as: :textarea %>
     </p>
 
     <p class="col-med-12">
       <strong>Narrative</strong>
-      <%= @summary.narrative %>
+      <%= best_in_place @summary, :narrative, as: :textarea %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.damage_assessment.empty? %>
-        <%= @summary.damage_assessment %>
+        <%= best_in_place @summary, :damage_assessment, as: :textarea  %>
       <% end %>
     </p>
 
@@ -154,137 +154,137 @@
     <p class="col-med-12">
       <% unless @summary.threat_remark.empty? %>
         <strong>Threat remark</strong>
-        <%= @summary.threat_remark %>
+        <%= best_in_place @summary, :threat_remark, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <strong>Weather</strong>
-      <%= @summary.weather %>
+      <%= best_in_place @summary, :weather, as: :textarea %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.projected_spread_12.empty? %>
         <strong>Projected spread 12</strong>
-        <%= @summary.projected_spread_12 %>
+        <%= best_in_place @summary, :projected_spread_12, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.projected_spread_24.empty? %>
         <strong>Projected spread 24</strong>
-        <%= @summary.projected_spread_24 %>
+        <%= best_in_place @summary, :projected_spread_24, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.projected_spread_48.empty? %>
         <strong>Projected spread 48</strong>
-        <%= @summary.projected_spread_48 %>
+        <%= best_in_place @summary, :projected_spread_48, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.projected_spread_after.empty? %>
         <strong>Projected spread 72</strong>
-        <%= @summary.projected_spread_72 %>
+        <%= best_in_place @summary, :projected_spread_72, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.projected_spread_after.empty? %>
         <strong>Projected spread after</strong>
-        <%= @summary.projected_spread_after %>
+        <%= best_in_place @summary, :projected_spread_after, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.stragetic_objectives.empty? %>
         <strong>Stragetic objectives</strong>
-        <%= @summary.stragetic_objectives %>
+        <%= best_in_place @summary, :stragetic_objectives, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.threat_12 %>
         <strong>Threat 12</strong>
-        <%= @summary.threat_12 %>
+        <%= best_in_place @summary, :threat_12, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.threat_24.empty? %>
         <strong>Threat 24</strong>
-        <%= @summary.threat_24 %>
+        <%= best_in_place @summary, :threat_24, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.threat_48.empty? %>
         <strong>Threat 48</strong>
-        <%= @summary.threat_48 %>
+        <%= best_in_place @summary, :threat_48, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% unless @summary.threat_72.empty? %>
         <strong>Threat 72</strong>
-        <%= @summary.threat_72 %>
+        <%= best_in_place @summary, :threat_72, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.threat_after? %>
         <strong>Threat after</strong>
-        <%= @summary.threat_after %>
+        <%= best_in_place @summary, :threat_after, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.critical_needs_12? %>
         <strong>Critical needs 12</strong>
-        <%= @summary.critical_needs_12 %>
+        <%= best_in_place @summary, :critical_needs_12, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.critical_needs_24? %>
         <strong>Critical needs 24</strong>
-        <%= @summary.critical_needs_24 %>
+        <%= best_in_place @summary, :critical_needs_24, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.critical_needs_48? %>
         <strong>Critical needs 48</strong>
-        <%= @summary.critical_needs_48 %>
+        <%= best_in_place @summary, :critical_needs_48, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.critical_needs_72? %>
         <strong>Critical needs 72</strong>
-        <%= @summary.critical_needs_72 %>
+        <%= best_in_place @summary, :critical_needs_72, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
      <% if @summary.critical_needs_after? %>
         <strong>Critical needs after</strong>
-        <%= @summary.critical_needs_after %>
+        <%= best_in_place @summary, :critical_needs_after, as: :textarea  %>
       <% end %> 
     </p>
 
     <p class="col-med-12">
       <% if @summary.strategic_discussion? %>
         <strong>Strategic discussion</strong>
-        <%= @summary.strategic_discussion %>
+        <%= best_in_place @summary, :strategic_discussion, as: :textarea  %>
       <% end %>
     </p>
 
     <p class="col-med-12">
       <strong>Tomorrows plan</strong>
-      <%= @summary.tomorrows_plan %>
+      <%= best_in_place @summary, :tomorrows_plan, as: :textarea %>
     </p>
 
     <p class="col-med-12">
@@ -301,18 +301,18 @@
 
     <p class="col-med-12">
       <strong>Remarks</strong>
-      <%= @summary.remarks %>
+      <%= best_in_place @summary, :remarks, as: :input %>
     </p>
 
     <p class="col-med-12">
     <strong>Resources</strong>
-      <%= @summary.resources %>
+      <%= best_in_place @summary, :resources, as: :input %>
     </p>
 
     <p class="col-med-12">
       <% if @summary.cooperators? %>
         <strong>Cooperators</strong>
-        <%= @summary.cooperators %>
+        <%= best_in_place @summary, :cooperators, as: :input %>
       <% end %>
     </p>
     <br>

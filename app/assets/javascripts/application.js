@@ -20,5 +20,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require select2
+//= require best_in_place
 //= require sweetalert2/dist/sweetalert2
 //= require_tree .
+
+
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+});
